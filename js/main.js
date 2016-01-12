@@ -1,9 +1,12 @@
 $(document).ready(function(){
-	var toDoItem = new ToDoItem({
-		description: "ToDoItem 1"
+	var toDoItems = new ToDoItems([
+		new ToDoItem({ description : "ToDoItem 1"}),
+		new ToDoItem({ description : "ToDoItem 2"}),
+		new ToDoItem({ description : "ToDoItem 3"})
+	]);
+	
+	var toDoItemsView = new ToDoItemsView({
+		model: toDoItems
 	});
-	var toDoItemView = new ToDoItemView({
-		model: toDoItem
-	});
-	$("body").append(toDoItemView.render().$el);
+	$("body").append(toDoItemsView.render().$el);
 });
