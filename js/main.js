@@ -1,12 +1,10 @@
+
 $(document).ready(function(){
-	var toDoItems = new ToDoItems([
-		new ToDoItem({ description : "ToDoItem 1"}),
-		new ToDoItem({ description : "ToDoItem 2"}),
-		new ToDoItem({ description : "ToDoItem 3"})
-	]);
-	
-	var toDoItemsView = new ToDoItemsView({
-		model: toDoItems
-	});
-	$("body").append(toDoItemsView.render().$el);
+    var todoItems = new TodoItems([
+        new TodoItem({ description: "TodoItem 1" }),
+        new TodoItem({ description: "TodoItem 2" })
+    ]);
+
+    var todoItemsView = new TodoItemsView({ model: todoItems });
+    $("body").append(todoItemsView.render().$el);
 });

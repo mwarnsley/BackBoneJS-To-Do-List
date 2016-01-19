@@ -1,15 +1,15 @@
-var ToDoItemView = Backbone.View.extend({
 
-	tagName: "li",
+var TodoItemView = Backbone.View.extend({
+    tagName: "li",
 
-	initialize: function(options){
-		if (!(options && options.model)) {
-			throw new Error("model is not specified.");
-		};
-	},
-	render: function(){
-		this.$el.html(this.model.get("description"));
+    initialize: function(options){
+        if (!(options && options.model))
+            throw new Error("model is not specified.");
+    },
 
-		return this;
-	}
+    render: function(){
+        this.$el.html(this.model.get("description"));
+
+        return this;
+    }
 });
